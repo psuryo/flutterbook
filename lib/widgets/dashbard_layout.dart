@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_book_app/widgets/custom_container.dart';
 import 'package:my_book_app/widgets/interactive_button.dart';
 import 'package:my_book_app/_pages/profil_page.dart';
+import 'package:my_book_app/widgets/settings_form.dart';
 
 class DashboardLayout extends StatefulWidget {
   final int counter;
@@ -29,6 +30,7 @@ class _DashboardLayoutState extends State<DashboardLayout> {
       _buildMainContent(), // Halaman Beranda (Counter Anda)
       _buildSettingsPage(), // Halaman Pengaturan
       const ProfilPage(), // Halaman Profil
+      const SettingsForm(),
     ];
 
     return Row(
@@ -46,6 +48,7 @@ class _DashboardLayoutState extends State<DashboardLayout> {
               const Divider(color: Colors.grey),
               _buildMenuItem(1, Icons.settings, "Pengaturan"),
               _buildMenuItem(2, Icons.person, "Profil"),
+              _buildMenuItem(3, Icons.edit, "Edit Profil"),
             ],
           ),
         ),
